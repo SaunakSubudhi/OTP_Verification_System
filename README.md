@@ -1,2 +1,2 @@
 # OTP_Verification_System
- OTP Verification System using Pythin
+ OTP Verification System using Python
