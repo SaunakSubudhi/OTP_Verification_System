@@ -1,0 +1,53 @@
+Python - Capstone Project
+
+
+Project Title: OTP Verification System
+
+1. Project Overview
+
+Objective: The objective of this project is to develop a robust OTP (One-Time Password) verification system using Python. This system ensures secure email authentication by sending a 6-digit OTP to the user's email address, which must be verified within a limited number of attempts.
+
+
+2. Project Components
+
+2.1 Email Validation:
+Purpose: To verify the validity of the provided email address before sending the OTP.
+Implementation:
+Uses a function is_valid_email to check if the email format is correct and if it contains a valid domain name (e.g., gmail, yahoo) and extension (.com, .org, etc.).
+If the email is invalid, the user is prompted to re-enter a valid email address.
+2.2 OTP Generation:
+Purpose: To generate a secure 6-digit OTP.
+Implementation:
+The generate_otp method generates a random 6-digit number using Python’s random.randint function.
+2.3 OTP Delivery:
+Purpose: To send the generated OTP to the user’s email address.
+Implementation:
+The send_otp method uses Python’s smtplib to send an email containing the OTP. The email is sent from a predefined sender email address.
+The MIMEText library is used to format the email message.
+2.4 OTP Verification:
+Purpose: To allow the user to enter and verify the OTP.
+Implementation:
+The verify_otp method compares the user-provided OTP with the generated OTP.
+The user is allowed up to 3 attempts to enter the correct OTP. If the OTP is incorrect after 3 attempts, the user is given the option to resend the OTP.
+
+
+
+
+3. Error Handling
+
+3.1 Invalid Email Handling:
+If the user provides an invalid email address, the system prompts the user to re-enter a valid email address.
+3.2 Invalid OTP Handling:
+If the user enters an incorrect OTP, they are notified and given additional attempts.
+After 3 incorrect attempts, the user can choose to resend the OTP.
+3.3 Exception Handling During Email Sending:
+The system includes a try-except block in the send_otp method to handle any issues that may arise during the OTP email sending process (e.g., network issues, incorrect SMTP configuration).
+
+
+4. Code Walkthrough
+OTP_Verification_System/OTP_Verification_System.py
+
+
+5. Conclusion
+This OTP verification system provides a secure method for email authentication, which is critical for user verification in various applications. The project includes comprehensive error handling, making it reliable and user-friendly. Future enhancements can further improve its security and usability.
+
